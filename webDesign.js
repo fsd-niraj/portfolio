@@ -220,10 +220,7 @@ const teckStackIcons = [
     { title: "Jenkins-Dark", src: "images/Jenkins-Dark.svg" },
     { title: "Heroku", src: "images/Heroku.svg" },
     { title: "R-Dark", src: "images/R-Dark.svg" },
-    { title: "Discord", src: "images/Discord.svg" },
-    { title: "Premiere", src: "images/Premiere.svg" },
-    { title: "Illustrator", src: "images/Illustrator.svg" },
-    { title: "XD", src: "images/XD.svg" },
+    { title: "Discord", src: "images/Discord.svg" }
 ];
 
 const socialMediaHandles = [
