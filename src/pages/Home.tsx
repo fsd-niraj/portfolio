@@ -1,4 +1,4 @@
-import { Anchor, Box, Title } from "@mantine/core";
+import { Anchor, Box } from "@mantine/core";
 
 export default function Home() {
 
@@ -46,9 +46,7 @@ export default function Home() {
         <p>Open Source</p>
         {openSource.map((d, i) => <p key={i}> - {d.name} {d.link && <a href={d.link}>Link</a>}</p>)}
         <p>Blogs</p>
-        {projects.map((d, i) => <p key={i}> - {d.name} {d.link && <a href={d.link}>Link</a>}</p>)}
-        <p>Whitepapers of my interest</p>
-        {projects.map((d, i) => <p key={i}> - {d.name} {d.link && <a href={d.link}>Link</a>}</p>)}
+        {blogs.map((d, i) => <p key={i}> - {d.name} {d.link && <a href={d.link}>Link</a>}</p>)}
 
         {socialMedia.map((link, index) =>
           <><Anchor href={link.href} key={index}>{link.name}</Anchor>{index !== socialMedia.length - 1 && " · "}</>
