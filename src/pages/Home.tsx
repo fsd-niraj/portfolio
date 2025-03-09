@@ -18,11 +18,11 @@ export default function Home() {
   ];
 
   const openSource = [
-    { name: "Twenty", link: "" },
-    { name: "Mattermost", link: "" },
-    { name: "Lightdash", link: "" },
-    { name: "Mantine", link: "" },
-    { name: "Stack Aith", link: "" },
+    { name: "Twenty", link: "https://github.com/fsd-niraj/twenty" },
+    { name: "Mattermost", link: "https://github.com/fsd-niraj/mattermost" },
+    { name: "Lightdash", link: "https://github.com/fsd-niraj/lightdash" },
+    { name: "Mantine", link: "https://github.com/fsd-niraj/mantine" },
+    { name: "Stack Auth", link: "https://github.com/fsd-niraj/stack-auth" },
   ]
 
   const blogs = [
