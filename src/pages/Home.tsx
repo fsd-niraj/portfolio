@@ -3,7 +3,7 @@ import { Anchor, Box } from "@mantine/core";
 export default function Home() {
 
   const socialMedia = [
-    { name: "LinkedIn", href: "https://www.linkedin.com/in/niraj" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/nirajp247" },
     { name: "Github", href: "https://www.github.com/fsd-niraj" },
     { name: "Medium", href: "https://fsd-niraj.medium.com" },
   ];
