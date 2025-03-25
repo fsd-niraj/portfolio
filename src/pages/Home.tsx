@@ -1,10 +1,18 @@
-import { Anchor, Box } from "@mantine/core";
+import { Anchor, Box, Text, Title } from "@mantine/core";
 
 export default function Home() {
 
+  const greeting = "Hi, I'm Niraj"
+
+  const summary = [
+    "I'm a software developer based in Toronto.",
+    "I'm passionate about building secure and scalable yet impactful products for everyone.",
+    "Currently focusing on mastering Web and Mobile Application journey starting with designing system → building → securing → testing → deploying incuding both frontend and backend."
+  ]
+
   const socialMedia = [
-    { name: "LinkedIn", href: "https://www.linkedin.com/in/nirajp247" },
-    { name: "Github", href: "https://www.github.com/fsd-niraj" },
+    { name: "LinkedIn", href: "https://linkedin.com/in/nirajp247" },
+    { name: "Github", href: "https://github.com/fsd-niraj" },
     { name: "Medium", href: "https://fsd-niraj.medium.com" },
   ];
 
@@ -34,19 +42,21 @@ export default function Home() {
 
   return (
     <>
-      <Box>
-        <p>Hi, I'm Niraj.</p>
+      <Box py="sm">
+        <Text>{greeting}</Text>
 
-        <p>I'm a software developer based in Toronto, ON. I'm passionate about building secure and scalable yet impactful products for everyone.</p>
+        <Box my="md">
+          {summary.map((d, i) =>
+            <Text key={i} mb="sm">{d}</Text>
+          )}
+        </Box>
 
-        <p>Currently I'm helping a stealth startup designing and debugging their system.</p>
-
-        <p>Projects</p>
-        {projects.map((d, i) => <p key={i}> - {d.name} {d.link && <a href={d.link}>Link</a>}</p>)}
-        <p>Open Source</p>
-        {openSource.map((d, i) => <p key={i}> - {d.name} {d.link && <a href={d.link}>Link</a>}</p>)}
-        <p>Blogs</p>
-        {blogs.map((d, i) => <p key={i}> - {d.name} {d.link && <a href={d.link}>Link</a>}</p>)}
+        <Title order={5}>Projects</Title>
+        {projects.map((d, i) => <p key={i}>{d.name} {d.link && <a href={d.link}>Link</a>}</p>)}
+        <Title order={5}>Open Source</Title>
+        {openSource.map((d, i) => <p key={i}>{d.name} {d.link && <a href={d.link}>Link</a>}</p>)}
+        <Title order={5}>Blogs</Title>
+        {blogs.map((d, i) => <p key={i}>{d.name} {d.link && <a href={d.link}>Link</a>}</p>)}
 
         {socialMedia.map((link, index) =>
           <><Anchor href={link.href} key={index}>{link.name}</Anchor>{index !== socialMedia.length - 1 && " · "}</>
