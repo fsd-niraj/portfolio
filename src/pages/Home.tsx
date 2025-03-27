@@ -26,6 +26,7 @@ export default function Home() {
   ];
 
   const openSource = [
+    { name: "Grafana (k6-studio)", link: "https://github.com/fsd-niraj/k6-studio" },
     { name: "Twenty", link: "https://github.com/fsd-niraj/twenty" },
     { name: "Mattermost", link: "https://github.com/fsd-niraj/mattermost" },
     { name: "Lightdash", link: "https://github.com/fsd-niraj/lightdash" },
