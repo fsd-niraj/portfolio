@@ -41,6 +41,8 @@ export default function Home() {
     { name: "Building ATS-friendly resume", link: "" },
   ]
 
+  const techStack = ["Web", "Mobile", "Desktop", "Backend", "Flutter", "iOS"]
+
   return (
     <>
       <Box py="sm">
@@ -50,6 +52,11 @@ export default function Home() {
           {summary.map((d, i) =>
             <Text key={i} mb="sm">{d}</Text>
           )}
+        </Box>
+
+        <Box my="md">
+          <Text>Stack and Specialization:</Text>
+          <Text fw="bold">{techStack.join(" · ")}</Text>
         </Box>
 
         <Title order={5}>Projects</Title>
