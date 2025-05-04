@@ -8,7 +8,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "@fsd-niraj",
-  description: "Portfolio website of Niraj Panchal, Software Developer",
+  description: "A portfolio website containing latest update of my professional life and some technical blogs which I find helpful.",
+  keywords: ["software engineer", "software developer", "niraj", "neeraj", "linkedin", "resume", "app developer", "mobile developer", "toronto", "immediate joiner", "open source", "freelance", "contract", "full time", "new grad", "experienced"],
 };
 
 export default function RootLayout({
