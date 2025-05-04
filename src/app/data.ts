@@ -2,7 +2,8 @@ export const homePageData = {
   summary:
     "I'm an impact driven developer, tinkerer, and open-source enthusaist.",
   interests: [
-    'aplication security',
+    'data security',
+    'satellite hacking',
     'artificial intelligence',
     'robotics',
     'system design',
