@@ -1,5 +1,5 @@
-import { FlipWords } from "@/app/components/ui/Filpwords";
-import { homePageData } from "./data";
+import { FlipWords } from "@/components/ui/Filpwords";
+import { homePageData } from "../data";
 
 export default function Home() {
 
