@@ -1,6 +1,7 @@
 export const homePageData = {
   summary:
-    "I'm an impact driven developer, tinkerer, and open-source enthusaist.",
+    "I'm an impact driven developer, tinkerer, and open-source enthusiast.",
+  subSummary: 'Trying to be a 100x dev 1x better dev daily.',
   interests: [
     'data security',
     'satellite hacking',
