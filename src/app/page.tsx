@@ -45,6 +45,8 @@ export default function Home() {
           <motion.h1 variants={LIST_ITEM_VARIANTS} className="my-2 text-lg hover:text-green-600 dark:hover:text-green-400 transition-colors duration-400">@fsd-niraj</motion.h1>
           <motion.p variants={LIST_ITEM_VARIANTS} className="text-gray-500 dark:text-zinc-400 leading-snug mt-4 mb-6">{homePageData.summary}
           </motion.p>
+          <motion.p variants={LIST_ITEM_VARIANTS} className="text-gray-500 dark:text-zinc-400 leading-snug mt-4 mb-6">Trying to be a <span className="line-through">100x dev</span> 1x better dev daily.
+          </motion.p>
           <motion.p variants={LIST_ITEM_VARIANTS} className="text-gray-500 dark:text-zinc-400 leading-snug mt-4 mb-6">
             Much interested in <FlipWords words={homePageData.interests} duration={1500} />
           </motion.p>
