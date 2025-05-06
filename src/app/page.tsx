@@ -17,7 +17,7 @@ export default function Home() {
     return <span className="text-black dark:text-white">{text}</span>
   }
 
-  const LIST_CONTAINER_VARIANTS = {
+  const LIST_CONTAINER_VARIANTS: Variants = {
     visible: {
       transition: {
         delayChildren: 0.2,
@@ -26,7 +26,7 @@ export default function Home() {
     }
   };
 
-  const LIST_ITEM_VARIANTS = {
+  const LIST_ITEM_VARIANTS: Variants = {
     hidden: {
       y: -10,
       opacity: 0
@@ -42,7 +42,7 @@ export default function Home() {
     <>
       <div className="max-w-2xl m-auto p-8 font-[family-name:var(--font-geist-sans)] flex flex-col h-screen gap-4 cursor-default">
         <motion.main className="grow" variants={LIST_CONTAINER_VARIANTS} initial="hidden" animate="visible">
-          <motion.h1 variants={LIST_ITEM_VARIANTS} className="my-2 text-lg hover:text-green-600 dark:hover:text-green-400 transition-colors duration-400">@fsd-niraj</motion.h1>
+          <motion.h1 variants={LIST_ITEM_VARIANTS} className="my-2 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-400">@fsd-niraj</motion.h1>
           <motion.p variants={LIST_ITEM_VARIANTS} className="text-gray-500 dark:text-zinc-400 leading-snug mt-4 mb-6">{homePageData.summary}
           </motion.p>
           <motion.p variants={LIST_ITEM_VARIANTS} className="text-gray-500 dark:text-zinc-400 leading-snug mt-4 mb-6">Trying to be a <span className="line-through">100x dev</span> 1x better dev daily.

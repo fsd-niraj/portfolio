@@ -3,11 +3,11 @@ export const homePageData = {
     "I'm an impact driven developer, tinkerer, and open-source enthusiast.",
   subSummary: 'Trying to be a 100x dev 1x better dev daily.',
   interests: [
-    'data security',
-    'satellite hacking',
-    'artificial intelligence',
-    'robotics',
+    'AI/ML',
+    'computer vision',
     'system design',
+    'security',
+    'robotics',
     'web3',
   ],
   social: [
