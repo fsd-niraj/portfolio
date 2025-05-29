@@ -13,9 +13,11 @@ Before running the project locally, ensure you have the following installed:
 
 ## 🚀 Local Setup
 
-1. **Fork the repository**
-   ```
-   cd portfolio
+- [Fork the repository](https://github.com/fsd-niraj/portfolio/fork)
+- In your terminal, locate the forkes repo and
 
-   npm install && npm run dev
-   ```
+  ```
+  cd portfolio
+
+  npm install && npm run dev
+  ```
