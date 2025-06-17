@@ -3,12 +3,12 @@ export const homePageData = {
     "I'm an impact driven developer, tinkerer, and open-source enthusiast.",
   subSummary: 'Trying to be a 100x dev 1x better dev daily.',
   interests: [
-    'AI/ML',
-    'computer vision',
+    'aviation computers',
     'system design',
+    'core engineering',
     'security',
+    'computer vision',
     'robotics',
-    'web3',
   ],
   social: [
     { name: 'Linkedin', href: 'https://www.linkedin.com/in/nirajp247' },
