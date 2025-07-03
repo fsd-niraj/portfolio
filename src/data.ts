@@ -13,7 +13,7 @@ export const homePageData = {
   social: [
     { name: 'Linkedin', href: 'https://www.linkedin.com/in/nirajp247' },
     { name: 'GitHub', href: 'https://www.github.com/fsd-niraj' },
-    { name: 'Medium', href: 'https://www.linkedin.com/in/nirajp247' },
+    { name: 'Medium', href: 'https://medium.com/@fsd-niraj' },
     { name: 'X', href: 'https://x.com/fsd_niraj' },
   ],
   following: [
