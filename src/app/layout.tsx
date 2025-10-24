@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { AuroraBackground } from "@/components/BackgroundBeams";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -51,7 +52,9 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased tracking-tight`}
       >
-        {children}
+        <AuroraBackground>
+          {children}
+        </AuroraBackground>
       </body>
     </html>
   );
