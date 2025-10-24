@@ -19,9 +19,20 @@ export const homePageData = {
   following: [
     {
       name: 'Arpit Bhayani',
-      href: 'https://www.linkedin.com/in/arpitbhayani/',
+      href: 'https://www.arpitbhayani.me/',
     },
     { name: 'Striver', href: 'https://www.linkedin.com/in/rajstriver/' },
-    { name: 'Harkirat', href: 'https://www.linkedin.com/in/kirat-li/' },
+    {
+      name: 'Neo Kim',
+      href: 'https://substack.com/profile/135589200-neo-kim',
+    },
+    {
+      name: 'Alexandre Zajac',
+      href: 'https://substack.com/profile/23673358-alexandre-zajac',
+    },
+    {
+      name: 'Hussein Nasser',
+      href: 'https://substack.com/@hnasr',
+    },
   ],
 };
