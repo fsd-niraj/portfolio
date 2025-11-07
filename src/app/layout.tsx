@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Maven_Pro } from "next/font/google";
 import "./globals.css";
-import { AuroraBackground } from "@/components/BackgroundBeams";
+import { AuroraBackground } from "@/components/ui/BackgroundBeams";
 
-const inter = Inter({
-  subsets: ["latin"],
+const inter = Maven_Pro({
+  subsets: ["latin-ext"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
