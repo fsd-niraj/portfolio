@@ -2,41 +2,14 @@
 import { FlipWords } from "@/components/ui/Filpwords";
 import { homePageData } from "../data";
 import { motion, Variants } from "motion/react";
-// import Resume from "../../public/resume.pdf";
+import { LIST_CONTAINER_VARIANTS, LIST_ITEM_VARIANTS } from "../constants";
+import { Link } from "@/components/ui/Link";
 
 export default function Home() {
-
-  const Anchor = ({ href, title }: { href: string, title: string }) => {
-    return (<>
-      <motion.a variants={LIST_ITEM_VARIANTS} href={href} target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:underline hover:text-green-600 dark:hover:text-green-400 transition-colors duration-400">{title}</motion.a>
-      &nbsp;
-    </>
-    )
-  }
 
   const Highlight = ({ text }: { text: string }) => {
     return <span className="text-black dark:text-white">{text}</span>
   }
-
-  const LIST_CONTAINER_VARIANTS: Variants = {
-    visible: {
-      transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.05
-      }
-    }
-  };
-
-  const LIST_ITEM_VARIANTS: Variants = {
-    hidden: {
-      y: -10,
-      opacity: 0
-    },
-    visible: {
-      y: 0,
-      opacity: 1
-    }
-  };
 
   return (
 
@@ -51,12 +24,12 @@ export default function Home() {
           <motion.p variants={LIST_ITEM_VARIANTS} className="text-gray-500 dark:text-zinc-400 leading-snug mt-4 mb-6">
             Much interested in <FlipWords words={homePageData.interests} duration={1500} />
           </motion.p>
-          <motion.p variants={LIST_ITEM_VARIANTS}>
+          <motion.div variants={LIST_ITEM_VARIANTS}>
             My knowledge portfolio includes readings from <br />
             {homePageData.following.map((name, i) =>
-              <> - <Anchor href={name.href} title={name.name} key={i} /> <br /></>
+              <motion.div key={i}> - <Link href={name.href} title={name.name} /> <br /></motion.div>
             )}
-          </motion.p>
+          </motion.div>
           <motion.h2 variants={LIST_ITEM_VARIANTS} className="my-3">Career timeline so far:</motion.h2>
           <motion.div variants={LIST_ITEM_VARIANTS} className="text-gray-500 dark:text-gray-400">
             <motion.h4>Most recent</motion.h4>
@@ -71,15 +44,16 @@ export default function Home() {
             - AI based brain tumor detector. <br />
             - CV based real time helmet detector. <br />
             - Resume builder which allowed me to apply 100+ jobs with each tailored resume. <br />
-            - Personal expense tracker app (in progress)
+            - Personal expense tracker app (in progress) <br />
+            - AI Sscurity system for huge social gatherings.
           </motion.p>
-          <motion.p variants={LIST_ITEM_VARIANTS} className="my-4">Open for project discussions, coffee-chats <Anchor href="mailto:develop.niraj@gmail.com" title="develop.niraj@gmail.com" /> </motion.p>
+          <motion.p variants={LIST_ITEM_VARIANTS} className="my-4">Open for project discussions, coffee-chats <Link href="mailto:develop.niraj@gmail.com" title="develop.niraj@gmail.com" /> </motion.p>
         </motion.main>
         <footer>
           <motion.div variants={LIST_CONTAINER_VARIANTS}
             initial="hidden" animate="visible" className="flex justify-center tracking-tight gap-4">
-            {homePageData.social.map((s, i) =>
-              <Anchor href={s.href} title={s.name} key={i} />
+            {homePageData.social.filter(s => s.show).map((s, i) =>
+              <Link href={s.href} title={s.name} key={i} />
             )}
           </motion.div>
         </footer>

@@ -11,10 +11,27 @@ export const homePageData = {
     'robotics',
   ],
   social: [
-    { name: 'Linkedin', href: 'https://www.linkedin.com/in/nirajp247' },
-    { name: 'GitHub', href: 'https://www.github.com/fsd-niraj' },
-    { name: 'Medium', href: 'https://medium.com/@fsd-niraj' },
-    { name: 'X', href: 'https://x.com/fsd_niraj' },
+    {
+      name: 'Linkedin',
+      href: 'https://www.linkedin.com/in/nirajp247',
+      newTab: true,
+      show: true,
+    },
+    {
+      name: 'GitHub',
+      href: 'https://www.github.com/fsd-niraj',
+      newTab: true,
+      show: true,
+    },
+    {
+      name: 'Medium',
+      href: 'https://medium.com/@fsd-niraj',
+      newTab: true,
+      show: true,
+    },
+    { name: 'X', href: 'https://x.com/fsd_niraj', newTab: true, show: true },
+    { name: 'Blogs', href: '/blogs', newTab: false, show: false },
+    { name: 'Bookshelf', href: '/bookshelf', newTab: false, show: false },
   ],
   following: [
     {
