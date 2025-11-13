@@ -4,6 +4,7 @@ import { homePageData } from "../data";
 import { motion, Variants } from "motion/react";
 import { LIST_CONTAINER_VARIANTS, LIST_ITEM_VARIANTS } from "../constants";
 import { Link } from "@/components/ui/Link";
+import { EncryptedText } from "@/components/ui/encrypted-text";
 
 export default function Home() {
 
@@ -16,7 +17,8 @@ export default function Home() {
     <>
       <div className="max-w-2xl m-auto p-8 font-[family-name:var(--font-geist-sans)] flex flex-col h-screen gap-4 cursor-default z-1">
         <motion.main className="grow" variants={LIST_CONTAINER_VARIANTS} initial="hidden" animate="visible">
-          <motion.h1 variants={LIST_ITEM_VARIANTS} className="my-2 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-400">@fsd-niraj</motion.h1>
+          <motion.h1 variants={LIST_ITEM_VARIANTS} className="my-2 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-400">@fsd-niraj
+          </motion.h1>
           <motion.p variants={LIST_ITEM_VARIANTS} className="leading-snug mt-4 mb-6">{homePageData.summary}
           </motion.p>
           <motion.p variants={LIST_ITEM_VARIANTS} className="text-gray-500 dark:text-zinc-400 leading-snug mt-4 mb-6">Trying to be a <span className="line-through">100x dev</span> 1x better dev daily.
@@ -39,14 +41,6 @@ export default function Home() {
             - freelanced for <Highlight text="3+" /> companies and did <Highlight text="one" /> contract for <Highlight text="two" /> months. <br />
             - did a <Highlight text="LOTTT" /> of open-source contributions. And still doing.
           </motion.div>
-          <motion.h2 variants={LIST_ITEM_VARIANTS} className="my-3">Projects – trying to solve real ife problems.</motion.h2>
-          <motion.p variants={LIST_ITEM_VARIANTS} className="text-gray-500 dark:text-gray-400">
-            - AI based brain tumor detector. <br />
-            - CV based real time helmet detector. <br />
-            - Resume builder which allowed me to apply 100+ jobs with each tailored resume. <br />
-            - Personal expense tracker app (in progress) <br />
-            - AI Sscurity system for huge social gatherings.
-          </motion.p>
           <motion.p variants={LIST_ITEM_VARIANTS} className="my-4">Open for project discussions, coffee-chats <Link href="mailto:develop.niraj@gmail.com" title="develop.niraj@gmail.com" /> </motion.p>
         </motion.main>
         <footer>
