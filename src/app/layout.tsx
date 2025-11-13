@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { Maven_Pro } from "next/font/google";
 import "./globals.css";
 import { AuroraBackground } from "@/components/ui/BackgroundBeams";
-
-const inter = Maven_Pro({
-  subsets: ["latin-ext"],
-  weight: "400",
-});
 
 export const metadata: Metadata = {
   title: "@fsd-niraj",
@@ -51,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased tracking-tight`}
+        className={`antialiased tracking-tight`}
       >
         <AuroraBackground>
           {children}
