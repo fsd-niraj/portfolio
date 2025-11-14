@@ -1,9 +1,22 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Geist, Geist_Mono } from "next/font/google";
 import { AuroraBackground } from "@/components/ui/BackgroundBeams";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "@fsd-niraj",
+  authors: [{ name: "Niraj Panchal" }],
+  applicationName: "Niraj Panchal Portfolio",
   description: "A portfolio website containing latest update of my professional life and some technical blogs which I find helpful.",
   keywords: [
     "Niraj Panchal",
@@ -45,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased tracking-tight`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased tracking-tight`}
       >
         <AuroraBackground>
           {children}
