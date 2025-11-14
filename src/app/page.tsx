@@ -1,10 +1,9 @@
 "use client";
 import { FlipWords } from "@/components/ui/Filpwords";
 import { homePageData } from "../data";
-import { motion, Variants } from "motion/react";
+import { motion } from "motion/react";
 import { LIST_CONTAINER_VARIANTS, LIST_ITEM_VARIANTS } from "../constants";
 import { Link } from "@/components/ui/Link";
-import { EncryptedText } from "@/components/ui/encrypted-text";
 
 export default function Home() {
 
