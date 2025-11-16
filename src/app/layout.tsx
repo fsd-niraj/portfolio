@@ -63,6 +63,8 @@ export default function RootLayout({
         <AuroraBackground>
           {children}
         </AuroraBackground>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7905964889390214"
+          crossOrigin="anonymous"></script>
       </body>
     </html>
   );
