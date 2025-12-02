@@ -34,7 +34,7 @@ export default function Home() {
           <motion.h2 variants={LIST_ITEM_VARIANTS} className="my-3">Career timeline so far:</motion.h2>
           <motion.div variants={LIST_ITEM_VARIANTS} className="text-gray-500 dark:text-gray-400">
             <motion.h4>Most recent</motion.h4>
-            - supervised as an Venue IT Engineer at Legends, Toronto. <br />
+            - Managed site reliability being a Software Engineer at Legends, Toronto. <br />
             <motion.h4>Past</motion.h4>
             - worked at an Ed-tech startup for more than <Highlight text="2" /> years in Mumbai, India. <br />
             - freelanced for <Highlight text="3+" /> companies and did <Highlight text="one" /> contract for <Highlight text="two" /> months. <br />
