@@ -26,19 +26,24 @@ export default function Home() {
             Much interested in <FlipWords words={homePageData.interests} duration={1500} />
           </motion.p>
           <motion.div variants={LIST_ITEM_VARIANTS}>
+            Bookshelf <br />
+            {homePageData.bookShelf.map((book, i) =>
+              <motion.div key={i} className="text-gray-500 dark:text-gray-400"> {book} <br /></motion.div>
+            )}
+          </motion.div>
+          <motion.div variants={LIST_ITEM_VARIANTS} className="my-3">
             My knowledge portfolio includes readings from <br />
             {homePageData.following.map((name, i) =>
               <motion.div key={i}> - <Link href={name.href} title={name.name} /> <br /></motion.div>
             )}
           </motion.div>
-          <motion.h2 variants={LIST_ITEM_VARIANTS} className="my-3">Career timeline so far:</motion.h2>
+          <motion.h2 variants={LIST_ITEM_VARIANTS}>Career timeline so far:</motion.h2>
           <motion.div variants={LIST_ITEM_VARIANTS} className="text-gray-500 dark:text-gray-400">
             <motion.h4>Most recent</motion.h4>
-            - Managed site reliability being a Software Engineer at Legends, Toronto. <br />
+            - Managed and built POS dashboards, site reliability, and networking as a Software Engineer at Legends, Toronto. <br />
             <motion.h4>Past</motion.h4>
             - worked at an Ed-tech startup for more than <Highlight text="2" /> years in Mumbai, India. <br />
             - freelanced for <Highlight text="3+" /> companies and did <Highlight text="one" /> contract for <Highlight text="two" /> months. <br />
-            - did a <Highlight text="LOTTT" /> of open-source contributions. And still doing.
           </motion.div>
           <motion.p variants={LIST_ITEM_VARIANTS} className="my-4">Open for project discussions, coffee-chats <Link href="mailto:develop.niraj@gmail.com" title="develop.niraj@gmail.com" /> </motion.p>
         </motion.main>
@@ -50,7 +55,7 @@ export default function Home() {
             )}
           </motion.div>
         </footer>
-      </div>
+      </div >
     </>
   );
 }
