@@ -1,12 +1,10 @@
-import { PortfolioData } from '@/types';
-
-export const portfolioData: PortfolioData = {
+export const portfolioData = {
   profile: {
     name: 'Niraj Panchal',
     title: 'Software Engineer',
     tagline: 'Trying to be 1x better dev daily.',
     summary:
-      "Impact-driven developer, tinkerer, and open-source enthusiast. I build things that solve real problems — from real-time analytics dashboards to AI-powered inspection tools.",
+      'Impact-driven developer, tinkerer, and open-source enthusiast. I build things that solve real problems — from real-time analytics dashboards to AI-powered inspection tools.',
     location: 'Toronto, Canada',
     email: 'develop.niraj@gmail.com',
     available: true,
@@ -82,7 +80,11 @@ export const portfolioData: PortfolioData = {
   ],
   social: [
     { name: 'GitHub', href: 'https://github.com/fsd-niraj', newTab: true },
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/nirajp247', newTab: true },
+    {
+      name: 'LinkedIn',
+      href: 'https://linkedin.com/in/nirajp247',
+      newTab: true,
+    },
     { name: 'X', href: 'https://x.com/fsd_niraj', newTab: true },
     { name: 'Medium', href: 'https://medium.com/@fsd-niraj', newTab: true },
   ],

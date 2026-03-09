@@ -1,10 +1,7 @@
 import { MetadataRoute } from 'next';
-import { getAllBlogPosts } from '@/lib/mdx';
 import { siteConfig } from '@/data/site-config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const blogPosts = getAllBlogPosts();
-
   // Static routes
   const staticRoutes = [
     {
@@ -33,13 +30,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Dynamic blog post routes
-  const blogRoutes = blogPosts.map((post) => ({
-    url: `${siteConfig.url}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }));
-
-  return [...staticRoutes, ...blogRoutes];
+  return [...staticRoutes];
 }

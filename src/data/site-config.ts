@@ -1,6 +1,4 @@
-import { SiteConfig } from '@/types';
-
-export const siteConfig: SiteConfig = {
+export const siteConfig = {
   name: '@fsd-niraj',
   title: 'Niraj Panchal | Full Stack Developer Portfolio',
   description:
