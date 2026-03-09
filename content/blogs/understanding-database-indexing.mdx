@@ -1,0 +1,61 @@
+---
+title: "Understanding Database Indexing"
+description: "A deep dive into how database indexes work and when to use them for optimal performance."
+date: "2026-02-10"
+author: "Niraj Panchal"
+tags: ["databases", "performance", "sql", "optimization"]
+published: true
+---
+
+## Introduction
+
+Database indexing is one of the most powerful tools for improving query performance. Understanding how indexes work and when to use them can make the difference between a slow application and a blazing fast one.
+
+## What is an Index?
+
+A database index is a data structure that improves the speed of data retrieval operations on a database table. Think of it like an index in a book - instead of reading every page to find a topic, you can look it up in the index and jump directly to the relevant pages.
+
+### Types of Indexes
+
+There are several types of indexes commonly used in databases:
+
+- **B-Tree Indexes**: The most common type, great for range queries
+- **Hash Indexes**: Optimized for equality comparisons
+- **Full-Text Indexes**: Designed for text search operations
+- **Spatial Indexes**: Used for geographic data
+
+## When to Use Indexes
+
+Indexes are beneficial when:
+
+1. You frequently query specific columns
+2. You need to enforce uniqueness
+3. You're performing range queries
+4. You're joining tables on specific columns
+
+However, indexes come with trade-offs. They:
+
+- Take up additional disk space
+- Slow down INSERT, UPDATE, and DELETE operations
+- Need to be maintained
+
+## Example: Creating an Index
+
+Here's how you create an index in SQL:
+
+```sql
+CREATE INDEX idx_users_email ON users(email);
+```
+
+This creates an index on the `email` column of the `users` table, making lookups by email much faster.
+
+## Best Practices
+
+1. **Index Foreign Keys**: Always index columns used in JOIN operations
+2. **Don't Over-Index**: Too many indexes can hurt write performance
+3. **Monitor Query Performance**: Use EXPLAIN to understand query execution
+4. **Consider Composite Indexes**: For queries that filter on multiple columns
+
+## Conclusion
+
+Database indexing is a crucial aspect of database optimization. By understanding when and how to use indexes, you can significantly improve your application's performance. Remember that indexing is about trade-offs - balance read performance with write performance based on your application's needs.

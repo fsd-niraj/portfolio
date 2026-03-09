@@ -1,12 +1,27 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Geist, Geist_Mono } from "next/font/google";
-import { AuroraBackground } from "@/components/ui/BackgroundBeams";
+import { Inter, Geist_Mono } from "next/font/google";
+import Season from "next/font/local";
+import { siteConfig } from "@/data/site-config";
+import { getPersonSchema, getWebsiteSchema } from "@/lib/structured-data";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
+
+const season = Season({
+  src: "../../public/season.woff2",
+  variable: "--font-season",
+  style: "normal",
+})
+
+const exposure = Season({
+  src: "../../public/exposure.woff2",
+  variable: "--font-exposure",
+  style: "normal",
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -14,40 +29,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "@fsd-niraj",
-  authors: [{ name: "Niraj Panchal" }],
-  applicationName: "Niraj Panchal Portfolio",
-  description: "A portfolio website containing latest update of my professional life and some technical blogs which I find helpful.",
-  keywords: [
-    "Niraj Panchal",
-    "Niraj",
-    "fsd",
-    "Full Stack Developer",
-    "MERN Stack Developer",
-    "Node.js Developer",
-    "React Developer",
-    "Cloud Developer",
-    "AWS Developer",
-    "Azure Developer",
-    "Software Engineer",
-    "Backend Developer",
-    "Frontend Developer",
-    "App Developer",
-    "Toronto",
-    "Humber College Alumni",
-    "Software engineer resume",
-    "software engineer",
-    "software engineer portfolio",
-    "full stack developer",
-  ],
-  openGraph: {
-    title: "Niraj Panchal | Full Stack Developer Portfolio",
-    description: "Explore Niraj professional life, projects, blog posts, and skills as a Full Stack Developer.",
-    url: "https://fsd-niraj.com",
-    type: "website",
-    siteName: "Niraj Panchal Portfolio",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
   },
-  icons: "/favicon.png"
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  authors: [{ name: siteConfig.author.name, url: siteConfig.url }],
+  creator: siteConfig.author.name,
+  publisher: siteConfig.author.name,
+  applicationName: siteConfig.title,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    creator: siteConfig.author.twitter,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: "/favicon.png",
 };
 
 export default function RootLayout({
@@ -55,16 +73,34 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personSchema = getPersonSchema();
+  const websiteSchema = getWebsiteSchema();
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased tracking-tight`}
+        className={`${inter.variable} ${season.variable} ${exposure.variable} ${geistMono.variable} antialiased tracking-tight`}
       >
-        <AuroraBackground>
+        <div className="relative max-w-2xl m-auto border-x border-dashed border-border min-h-screen px-4 duration-200 ease-in-out">
           {children}
-        </AuroraBackground>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7905964889390214"
-          crossOrigin="anonymous"></script>
+        </div>
+        {siteConfig.analytics?.googleAdSenseId && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${siteConfig.analytics.googleAdSenseId}`}
+            crossOrigin="anonymous"
+          />
+        )}
       </body>
     </html>
   );

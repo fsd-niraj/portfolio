@@ -1,0 +1,99 @@
+---
+title: "Building Scalable Systems: Lessons Learned"
+description: "Key principles and patterns for building systems that scale from hundreds to millions of users."
+date: "2026-02-05"
+author: "Niraj Panchal"
+tags: ["system-design", "scalability", "architecture", "distributed-systems"]
+published: true
+---
+
+## Introduction
+
+Building scalable systems is one of the most challenging aspects of software engineering. Over the years, I've learned that scalability isn't just about handling more users - it's about building systems that can grow without becoming unmaintainable.
+
+## Core Principles
+
+### 1. Design for Failure
+
+In distributed systems, failure is not an exception - it's the norm. Design your systems with the assumption that:
+
+- Networks will have latency
+- Services will go down
+- Data will be inconsistent
+
+Implement retry logic, circuit breakers, and graceful degradation from the start.
+
+### 2. Decouple Components
+
+Tight coupling is the enemy of scalability. Use:
+
+- **Message Queues**: Asynchronous communication between services
+- **APIs**: Well-defined interfaces between components
+- **Event-Driven Architecture**: React to changes rather than polling
+
+### 3. Cache Aggressively
+
+Caching is your best friend for scalability:
+
+```javascript
+// Example: Redis caching layer
+async function getUserData(userId) {
+  // Check cache first
+  const cached = await redis.get(`user:${userId}`);
+  if (cached) return JSON.parse(cached);
+
+  // Cache miss - fetch from database
+  const user = await db.users.findById(userId);
+
+  // Store in cache for future requests
+  await redis.set(`user:${userId}`, JSON.stringify(user), 'EX', 3600);
+
+  return user;
+}
+```
+
+## Scaling Strategies
+
+### Horizontal vs Vertical Scaling
+
+- **Vertical Scaling**: Adding more resources (CPU, RAM) to existing machines
+  - Pros: Simple, no code changes needed
+  - Cons: Limited by hardware, single point of failure
+
+- **Horizontal Scaling**: Adding more machines
+  - Pros: Nearly unlimited scalability, better fault tolerance
+  - Cons: More complex, requires stateless design
+
+### Database Scaling
+
+Database bottlenecks are common. Consider:
+
+1. **Read Replicas**: For read-heavy workloads
+2. **Sharding**: Distributing data across multiple databases
+3. **Connection Pooling**: Efficiently managing database connections
+4. **Query Optimization**: Proper indexing and query design
+
+## Monitoring and Observability
+
+You can't scale what you don't measure. Implement:
+
+- **Metrics**: Track system performance (latency, throughput, error rates)
+- **Logging**: Centralized logging for debugging
+- **Tracing**: Follow requests through your distributed system
+- **Alerting**: Get notified before users notice problems
+
+## Real-World Example: POS Dashboard
+
+At Legends, we built a POS dashboard that needed to handle thousands of concurrent users during peak events. Here's what we did:
+
+1. **CDN for Static Assets**: Reduced server load by 70%
+2. **WebSocket Connections**: Real-time updates without polling
+3. **Redis for Session Management**: Fast, distributed session storage
+4. **Database Read Replicas**: Separated read and write workloads
+5. **Auto-scaling Infrastructure**: Automatically added capacity during peaks
+
+## Conclusion
+
+Building scalable systems requires thinking ahead and making architectural decisions that support growth. Start with solid principles, measure everything, and iterate based on real-world data. Remember: premature optimization is the root of all evil, but planning for scale from the beginning can save you from costly rewrites later.
+
+The key is finding the balance between over-engineering and being unprepared for growth. Build what you need today, but design with tomorrow in mind.
