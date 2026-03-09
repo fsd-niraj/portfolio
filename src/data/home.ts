@@ -1,13 +1,12 @@
 export const hero = {
   name: 'Niraj',
   role: 'developer',
-  fields: 'brand and product',
+  fields: 'Product and AI',
 };
 
 export const glance = [
   { tenure: '3.5+', description: 'years of experience' },
   { tenure: '2', description: 'freelance' },
-  { tenure: '8+', description: 'OSS PR merged' },
 ];
 
 export const projects = [
