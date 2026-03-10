@@ -2,7 +2,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { projects } from "@/data/home";
 
 const Card = ({ title, category, img, href }: { img: string; title: string; category: string; href: string }) => (
-  <a href={href} className="block min-w-xs max-h-xs rounded-sm transition-all duration-200 ease-in-out cursor-pointer hover:bg-foreground/5 p-1 hover:-translate-y-1">
+  <a href={href} className="block rounded-sm transition-all duration-200 ease-in-out cursor-pointer hover:bg-foreground/5 p-1 hover:-translate-y-[1.5px]">
     <div className="rounded-sm overflow-hidden">
       <img src={img} alt={title} className="size-full" />
     </div>
