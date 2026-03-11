@@ -1,4 +1,5 @@
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import Header from "./SectionHeader";
 
 const icons = {
   github: (
@@ -41,7 +42,7 @@ export default function Contact() {
     <ScrollReveal>
       <div className="flex justify-between items-start py-4 mb-[4rem]">
         <div className="w-full">
-          <h2 className="text-xs uppercase tracking-widest text-muted">get in touch</h2>
+          <Header title="get in touch" />
         </div>
         <div className="flex w-full gap-3 justify-end">
           {links.map((link, index) =>

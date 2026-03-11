@@ -91,7 +91,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${season.variable} ${exposure.variable} ${geistMono.variable} antialiased tracking-tight`}
       >
-        <div className="relative max-w-2xl m-auto border-x border-dashed border-border min-h-screen px-4 duration-200 ease-in-out">
+        <div className="relative max-w-2xl m-auto border-x border-dashed border-border min-h-screen px-4">
           {children}
         </div>
         {siteConfig.analytics?.googleAdSenseId && (
