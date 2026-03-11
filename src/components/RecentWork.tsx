@@ -1,5 +1,6 @@
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { projects } from "@/data/home";
+import Header from "./SectionHeader";
 
 const Card = ({ title, category, img, href }: { img: string; title: string; category: string; href: string }) => (
   <a href={href} className="block rounded-sm transition-all duration-200 ease-in-out cursor-pointer hover:bg-foreground/5 p-1 hover:-translate-y-[1.5px]">
@@ -15,7 +16,7 @@ export default function RecentWork() {
   return (
     <ScrollReveal>
       <div className="py-4">
-        <h2 className="mb-4 text-xs uppercase tracking-widest text-muted">recent work</h2>
+        <Header title="recent work" />
         <div className="grid grid-cols-2 gap-2 group">
           {projects.map((project, index) =>
             <div key={index} className="transition-opacity duration-200 group-hover:opacity-40 hover:!opacity-100">
