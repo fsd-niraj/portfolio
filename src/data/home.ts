@@ -23,14 +23,14 @@ export const projects = [
     href: '#',
   },
   {
-    img: 'https://static.vecteezy.com/system/resources/thumbnails/025/008/911/small_2x/blue-noise-textured-gradient-background-grainy-blurred-landing-page-backdrop-website-header-poster-banner-design-photo.jpg',
-    title: 'SEO Auditor',
+    img: '/assets/image2.png',
+    title: 'Vibe coded landing page',
     category: 'project',
     href: '#',
   },
   {
-    img: 'https://static.vecteezy.com/system/resources/thumbnails/025/008/911/small_2x/blue-noise-textured-gradient-background-grainy-blurred-landing-page-backdrop-website-header-poster-banner-design-photo.jpg',
-    title: 'Review Response Agent',
+    img: '/assets/image1.png',
+    title: 'Vibe coded dashboard',
     category: 'project',
     href: '#',
   },
