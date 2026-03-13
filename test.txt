@@ -1,0 +1,179 @@
+You are an expert UI/UX designer and senior frontend engineer.
+
+Your task is to generate a complete modern landing page for a premium cheesecake brand.
+
+Brand Name: "Golden Cheesecakes"
+
+Goal:
+Create a visually delicious, premium dessert-store website that instantly makes visitors crave cheesecake and encourages them to order.
+
+Design Style:
+Modern, bright, clean, playful, and premium bakery aesthetic.
+
+Color System:
+Primary colors: Warm cheesecake tones
+- Cream: #FFF6E9
+- Soft Yellow: #FFD86B
+- Mango Orange: #FF9F43
+Accent:
+- Dark Brown: #3A2A1E (for text)
+- White: #FFFFFF
+
+Typography:
+Headlines: Playfair Display or Instrument Serif (elegant dessert/bakery feel)
+Body: Inter or Poppins
+
+Layout Requirements:
+Create a fully responsive modern website containing the following sections.
+
+------------------------------------------------
+
+1. HERO / LANDING SECTION
+
+Background:
+A soft warm gradient resembling cheesecake tones.
+
+Navigation Bar:
+Floating rounded navigation bar with subtle shadow.
+
+Left:
+Logo text: "Golden Crust"
+
+Center Navigation:
+Home
+Menu
+Testimonials
+About
+
+Right CTA Button:
+"Order Now"
+
+Hero Content (centered):
+Headline:
+"Handcrafted Cheesecakes Made With Love"
+
+Subheadline:
+"Freshly baked cheesecakes made from premium ingredients, delivered to your doorstep."
+
+Primary CTA:
+"Explore Cheesecakes"
+
+Secondary CTA:
+"See Best Sellers"
+
+Hero Visual:
+Large high-quality cheesecake image on the right side with soft drop shadow.
+
+------------------------------------------------
+
+2. FEATURED CHEESECAKES / AVAILABLE ITEMS SECTION
+
+Section Title:
+"Our Cheesecake Collection"
+
+Display products in a responsive card grid (3 or 4 columns on desktop).
+
+Each card contains:
+• Cheesecake image
+• Cheesecake name
+• Short description
+• Price
+• Star rating
+• "Add to Cart" button
+
+Example items:
+- Classic New York Cheesecake
+- Mango Cheesecake
+- Chocolate Truffle Cheesecake
+- Strawberry Swirl Cheesecake
+- Blueberry Bliss Cheesecake
+- Lotus Biscoff Cheesecake
+
+Cards should have:
+rounded corners
+soft shadows
+hover lift animation
+
+------------------------------------------------
+
+3. WHY OUR CHEESECAKES
+
+Three feature columns with icons:
+
+Fresh Ingredients
+"We use premium cream cheese and natural ingredients."
+
+Handcrafted Daily
+"Each cheesecake is baked fresh every morning."
+
+Fast Delivery
+"Delivered chilled and fresh to your doorstep."
+
+------------------------------------------------
+
+4. TESTIMONIAL SECTION
+
+Background: soft cream color.
+
+Section Title:
+"What Our Customers Say"
+
+Show 3 testimonial cards.
+
+Each card contains:
+• customer photo
+• name
+• star rating
+• short review
+
+Example:
+"Absolutely the best cheesecake I've ever had. The Lotus Biscoff one is addictive!"
+
+Add soft hover animation.
+
+------------------------------------------------
+
+5. CALL TO ACTION SECTION
+
+Large highlighted section with warm orange background.
+
+Text:
+"Ready to Taste the Best Cheesecake in Town?"
+
+Button:
+"Order Your Cheesecake"
+
+------------------------------------------------
+
+6. FOOTER
+
+Footer with dark background.
+
+Columns:
+• Brand description
+• Quick links
+• Social media
+• Contact
+
+Example:
+Instagram
+Facebook
+Email
+Phone
+
+Include copyright text.
+
+------------------------------------------------
+
+Technical Requirements:
+
+• Use modern NextJS + TailwindCSS
+• Fully responsive layout
+• Smooth hover animations (Framer, Motion, etc.)
+• Clean spacing and typography
+• Use placeholder cheesecake images and videos from Unsplash and open sources
+• Use soft shadows and rounded corners
+• Maintain a premium dessert brand aesthetic
+
+Output:
+Return a complete working landing page.

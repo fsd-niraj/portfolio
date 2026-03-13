@@ -11,6 +11,12 @@ export const glance = [
 
 export const projects = [
   {
+    img: '/assets/image3.png',
+    title: 'HyperX NGEUNITY - MacOS',
+    category: 'project',
+    href: 'https://github.com/fsd-niraj/hyperx-macos',
+  },
+  {
     img: 'https://static.vecteezy.com/system/resources/thumbnails/025/008/911/small_2x/blue-noise-textured-gradient-background-grainy-blurred-landing-page-backdrop-website-header-poster-banner-design-photo.jpg',
     title: 'Youtube FaceLess',
     category: 'project',
