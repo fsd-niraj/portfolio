@@ -4,7 +4,7 @@ import { FlipWords } from "./ui/Filpwords";
 
 export default function HeroHead() {
 
-  const words = ["scalable", "secure", "reliable"]
+  const words = ["scalable.", "secure.", "reliable."]
 
   return (
     <ScrollReveal>
@@ -12,7 +12,7 @@ export default function HeroHead() {
         <h1 className="text-4xl font-season">
           Hello, I'm {hero.name}. <br />
           I <span className="font-exposure text-muted">design</span> systems <br />
-          that are <FlipWords words={words} className="font-exposure text-muted" />
+          that are <FlipWords words={words} duration={350} className="font-exposure text-muted" />
         </h1>
       </div>
     </ScrollReveal>
