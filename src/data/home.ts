@@ -12,7 +12,7 @@ export const glance = [
 export const projects = [
   {
     img: '/assets/image3.png',
-    title: 'HyperX NGEUNITY - MacOS',
+    title: 'HyperX NGENUITY - MacOS',
     category: 'project',
     href: 'https://github.com/fsd-niraj/hyperx-macos',
   },
@@ -86,11 +86,6 @@ export const blogs = [
 ];
 
 export const books = [
-  {
-    title: 'The Secret',
-    author: 'Rhonda bryne',
-    category: 'life',
-  },
   { title: 'Think Straight', author: 'Darius foroux', category: 'mind' },
   {
     title: 'Designing Data-Intensive Applications',
