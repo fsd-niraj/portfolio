@@ -4,7 +4,7 @@ import { FlipWords } from "./ui/Filpwords";
 
 export default function HeroHead() {
 
-  const words = ["scalable.", "secure.", "reliable."]
+  const words = ["scalable.", "secure.", "reliable.", "performant."]
 
   return (
     <ScrollReveal>
