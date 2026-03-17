@@ -11,13 +11,13 @@ export const glance = [
 
 export const projects = [
   {
-    img: "/assets/image3.png",
+    img: "https://github.com/fsd-niraj/pit-tool",
     title: "PIT Tool",
     category: "project",
     href: "https://github.com/fsd-niraj/pit-tool",
   },
   {
-    img: "/assets/image3.png",
+    img: "https://github.com/fsd-niraj/hyperx-macos",
     title: "HyperX NGENUITY - MacOS",
     category: "project",
     href: "https://github.com/fsd-niraj/hyperx-macos",

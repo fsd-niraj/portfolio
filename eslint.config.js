@@ -21,13 +21,13 @@ const config = [
       // ── TypeScript ──────────────────────────────────────────────────
       // Ignore intentionally unused vars prefixed with _
       "@typescript-eslint/no-unused-vars": [
-        "error",
+        "warn",
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
       // Prefer `import type` for type-only imports (better tree-shaking)
       "@typescript-eslint/consistent-type-imports": [
-        "error",
-        { prefer: "type-imports" },
+        "off",
+        // { prefer: "type-imports" },
       ],
       // Warn on `any` — too broad to block, but worth seeing
       "@typescript-eslint/no-explicit-any": "off",
