@@ -1,15 +1,23 @@
 export const siteConfig = {
   name: "@fsd-niraj",
-  title: "Niraj Panchal | Full Stack Developer Portfolio",
-  description:
-    "A portfolio website containing latest update of my professional life and some technical blogs which I find helpful.",
+  title: "Niraj Panchal | Full Stack Developer",
+  description: "I build and ship softwares impactful softwares",
   url: "https://fsd-niraj.com",
+  ogImage: "https://fsd-niraj.com/opengraph-image",
+
+  locale: "en_US",
+  themeColor: "#09090b",
+  category: "technology",
+
   author: {
     name: "Niraj Panchal",
     email: "develop.niraj@gmail.com",
     twitter: "@fsd_niraj",
+    twitterHandle: "fsd_niraj",
     linkedin: "nirajp247",
+    github: "fsd-niraj",
   },
+
   keywords: [
     "Niraj Panchal",
     "Niraj",
@@ -32,6 +40,7 @@ export const siteConfig = {
     "software engineer portfolio",
     "full stack developer",
   ],
+
   analytics: {
     googleAdSenseId: "ca-pub-7905964889390214",
   },
