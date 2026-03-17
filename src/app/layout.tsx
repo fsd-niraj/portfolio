@@ -30,30 +30,26 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+
   title: {
-    default: siteConfig.name,
+    default: siteConfig.title,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
+  category: siteConfig.category,
+
   authors: [{ name: siteConfig.author.name, url: siteConfig.url }],
   creator: siteConfig.author.name,
   publisher: siteConfig.author.name,
   applicationName: siteConfig.title,
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: siteConfig.url,
-    title: siteConfig.title,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
+
+  // Canonical URL — tells Google there is one true URL for this page
+  alternates: {
+    canonical: siteConfig.url,
   },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.title,
-    description: siteConfig.description,
-    creator: siteConfig.author.twitter,
-  },
+
+  // Controls how the page appears in search results
   robots: {
     index: true,
     follow: true,
@@ -65,7 +61,49 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: "/favicon.png",
+
+  // og:image itself comes from /opengraph-image.tsx (Next.js file convention)
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    url: siteConfig.url,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.title,
+        type: "image/png",
+      },
+    ],
+  },
+
+  // Twitter Card — used by X (Twitter)
+  // summary_large_image renders the full wide preview card
+  twitter: {
+    card: "summary_large_image",
+    site: `@${siteConfig.author.twitterHandle}`,
+    creator: siteConfig.author.twitter,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.title,
+      },
+    ],
+  },
+
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
