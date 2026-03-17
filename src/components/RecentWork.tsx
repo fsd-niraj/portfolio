@@ -1,16 +1,7 @@
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { projects } from "@/data/home";
 import Header from "./SectionHeader";
-import Image from "next/image";
-
-// const imgElement = document.getElementById('myImage');
-// fetch('https://example.com/image.jpg')
-//   .then(response => response.blob())
-//   .then(blob => {
-//     const imgURL = URL.createObjectURL(blob);
-//     imgElement.src = imgURL;
-//   })
-//   .catch(err => console.error('Error loading image:', err));
+import PreviewCard from "./PreviewCard";
 
 // Cycles through row patterns (each sums to 4 cols), then handles the remainder.
 // e.g. 8 items → [2,1,1] + [1,1,2] + [2,2] — no empty cells, varied sizes.
@@ -53,45 +44,6 @@ const imgClass: Record<number, string> = {
   4: "aspect-video",
 };
 
-const Card = ({
-  title,
-  category,
-  img,
-  href,
-  imageClass,
-}: {
-  img: string;
-  title: string;
-  category: string;
-  href: string;
-  imageClass: string;
-}) => {
-  let imgUrl = img;
-  fetch(img)
-    .then((res) => res.blob())
-    .then((blob) => {
-      imgUrl = URL.createObjectURL(blob);
-    });
-  return (
-    <a
-      href={href}
-      className="block rounded-sm transition-all duration-200 ease-in-out cursor-pointer hover:bg-foreground/5 p-1 hover:-translate-y-[1.5px] group/card"
-    >
-      <div className={`rounded-sm overflow-hidden ${imageClass}`}>
-        <Image
-          src={imgUrl}
-          alt={title}
-          className="size-full object-cover transition-transform duration-500 ease-out group-hover/card:scale-105"
-          width={100}
-          height={100}
-        />
-      </div>
-      <p className="text-sm mt-1">{title}</p>
-      <p className="text-sm text-muted capitalize">{category}</p>
-    </a>
-  );
-};
-
 export default function RecentWork() {
   const spans = getBentoSpans(projects.length);
 
@@ -105,7 +57,7 @@ export default function RecentWork() {
               key={index}
               className={`transition-opacity duration-200 group-hover:opacity-40 hover:!opacity-100 ${colClass[spans[index]]}`}
             >
-              <Card {...project} imageClass={imgClass[spans[index]]} />
+              <PreviewCard {...project} imageClass={imgClass[spans[index]]} />
             </div>
           ))}
         </div>
