@@ -1,12 +1,12 @@
-import { siteConfig } from '@/data/site-config';
+import { siteConfig } from "@/data/site-config";
 
 /**
  * Generate Schema.org Person structured data for the author
  */
 export function getPersonSchema() {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
+    "@context": "https://schema.org",
+    "@type": "Person",
     name: siteConfig.author.name,
     email: siteConfig.author.email,
     url: siteConfig.url,
@@ -15,10 +15,10 @@ export function getPersonSchema() {
       `https://linkedin.com/in/${siteConfig.author.linkedin}`,
       `https://github.com/fsd-niraj`,
     ].filter(Boolean),
-    jobTitle: 'Software Engineer',
+    jobTitle: "Software Engineer",
     worksFor: {
-      '@type': 'Organization',
-      name: 'Legends',
+      "@type": "Organization",
+      name: "Legends",
     },
   };
 }
@@ -28,16 +28,16 @@ export function getPersonSchema() {
  */
 export function getWebsiteSchema() {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
+    "@context": "https://schema.org",
+    "@type": "WebSite",
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
     author: {
-      '@type': 'Person',
+      "@type": "Person",
       name: siteConfig.author.name,
     },
-    inLanguage: 'en-US',
+    inLanguage: "en-US",
   };
 }
 
@@ -46,24 +46,24 @@ export function getWebsiteSchema() {
  */
 export function getBlogPostSchema(post: any) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
     datePublished: post.date,
     dateModified: post.date,
     author: {
-      '@type': 'Person',
+      "@type": "Person",
       name: post.author,
       email: siteConfig.author.email,
     },
     publisher: {
-      '@type': 'Person',
+      "@type": "Person",
       name: siteConfig.author.name,
     },
     url: `${siteConfig.url}/blog/${post.slug}`,
-    keywords: post.tags.join(', '),
+    keywords: post.tags.join(", "),
     articleBody: post.description,
-    inLanguage: 'en-US',
+    inLanguage: "en-US",
   };
 }

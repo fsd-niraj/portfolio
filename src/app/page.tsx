@@ -10,21 +10,19 @@ import Books from "@/components/Books";
 
 export default function Home() {
   return (
-    <>
-      <div className="flex flex-col">
-        <HeroHead />
-        <hr className="full-bleed" />
-        <Glance />
-        <hr className="full-bleed" />
-        <RecentWork />
-        <hr className="full-bleed" />
-        <Writings />
-        <hr className="full-bleed" />
-        <Books />
-        <hr className="full-bleed" />
-        <Contact />
-        <ThemeToggle />
-      </div>
-    </>
+    <div className="flex flex-col">
+      <HeroHead />
+      <hr className="full-bleed" />
+      <Glance />
+      <hr className="full-bleed" />
+      <RecentWork />
+      <hr className="full-bleed" />
+      <Writings />
+      <hr className="full-bleed" />
+      <Books />
+      <hr className="full-bleed" />
+      <Contact />
+      <ThemeToggle />
+    </div>
   );
 }
