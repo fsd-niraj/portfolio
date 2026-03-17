@@ -32,7 +32,7 @@ export const Scales = ({
         "absolute inset-0 h-full w-full overflow-hidden",
         "[--pattern-scales:var(--color-neutral-950)]/10",
         "dark:[--pattern-scales:var(--color-white)]/10",
-        className,
+        className
       )}
       style={
         {

@@ -23,20 +23,41 @@ const icons = {
     </svg>
   ),
   email: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      className="w-5 h-5"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+      />
     </svg>
   ),
-}
+};
 
 export default function Contact() {
-
   const links = [
-    { url: "https://github.com/fsd-niraj", icon: icons.github, label: "GitHub" },
+    {
+      url: "https://github.com/fsd-niraj",
+      icon: icons.github,
+      label: "GitHub",
+    },
     { url: "https://x.com/fsd_niraj", icon: icons.twitter, label: "Twitter" },
-    { url: "https://linkedin.com/in/nirajp247", icon: icons.linkedin, label: "LinkedIn" },
-    { url: "https://instagram.com/nirajpanchall", icon: icons.instagram, label: "Instagram" },
-  ]
+    {
+      url: "https://linkedin.com/in/nirajp247",
+      icon: icons.linkedin,
+      label: "LinkedIn",
+    },
+    {
+      url: "https://instagram.com/nirajpanchall",
+      icon: icons.instagram,
+      label: "Instagram",
+    },
+  ];
 
   return (
     <ScrollReveal>
@@ -45,7 +66,7 @@ export default function Contact() {
           <Header title="get in touch" />
         </div>
         <div className="flex w-full gap-3 justify-end">
-          {links.map((link, index) =>
+          {links.map((link, index) => (
             <a
               key={index}
               href={link.url}
@@ -54,9 +75,9 @@ export default function Contact() {
             >
               {link.icon}
             </a>
-          )}
+          ))}
         </div>
       </div>
     </ScrollReveal>
-  )
+  );
 }

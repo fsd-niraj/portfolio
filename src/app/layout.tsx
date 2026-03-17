@@ -15,13 +15,13 @@ const season = Season({
   src: "../../public/season.woff2",
   variable: "--font-season",
   style: "normal",
-})
+});
 
 const exposure = Season({
   src: "../../public/exposure.woff2",
   variable: "--font-exposure",
   style: "normal",
-})
+});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   icons: "/favicon.png",

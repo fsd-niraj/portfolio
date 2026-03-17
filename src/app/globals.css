@@ -70,5 +70,9 @@ body {
   background: var(--border);
 }
 
-.full-bleed-dot:first-child { left: calc(50% - 21rem); }
-.full-bleed-dot:last-child  { left: calc(50% + 21rem); }
+.full-bleed-dot:first-child {
+  left: calc(50% - 21rem);
+}
+.full-bleed-dot:last-child {
+  left: calc(50% + 21rem);
+}
