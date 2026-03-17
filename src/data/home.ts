@@ -10,6 +10,12 @@ export const glance = [
 ];
 
 export const projects = [
+   {
+    img: '/assets/image3.png',
+    title: 'PIT Tool,
+    category: 'project',
+    href: 'https://github.com/fsd-niraj/pit-tool,
+  },
   {
     img: '/assets/image3.png',
     title: 'HyperX NGENUITY - MacOS',
