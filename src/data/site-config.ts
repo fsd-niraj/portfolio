@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "@fsd-niraj",
-  title: "Niraj Panchal | Full Stack Developer",
+  title: "Niraj Panchal | Software Engineer",
   description: "I build and ship softwares impactful softwares",
   url: "https://fsd-niraj.com",
   ogImage: "https://fsd-niraj.com/opengraph-image",
