@@ -28,7 +28,7 @@ export default async function OGImage() {
     toFontData(path.join(process.cwd(), "public/exposure.woff2")),
   ]);
 
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000" || "https://fsd-niraj.com";
+  const base = process.env.ENVIRONMENT === "dev" ? "http://localhost:3000" : process.env.NEXT_PUBLIC_SITE_URL;
 
   const bg = new URL("/opengraph-bg.png", base).toString();
 
