@@ -3,6 +3,10 @@ import { readFile } from "fs/promises";
 import path from "path";
 import { decompress } from "wawoff2";
 import { siteConfig } from "@/data/site-config";
+import dotenv from "dotenv"
+
+const env = process.env.NODE_ENV || 'development'
+dotenv.config({ path: `.env.${env}` })
 
 export const alt = siteConfig.title;
 
@@ -28,7 +32,10 @@ export default async function OGImage() {
     toFontData(path.join(process.cwd(), "public/exposure.woff2")),
   ]);
 
-  const base = process.env.ENVIRONMENT === "dev" ? "http://localhost:3000" : process.env.NEXT_PUBLIC_SITE_URL;
+  const base =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : process.env.NEXT_PUBLIC_SITE_URL;
 
   const bg = new URL("/opengraph-bg.png", base).toString();
 
