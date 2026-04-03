@@ -22,7 +22,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0d0d0d;
     --foreground: #ededed;
@@ -31,14 +31,21 @@
   }
 }
 
-html.dark {
+body.dark {
   --background: #0d0d0d;
   --foreground: #ededed;
   --muted: #7a8087;
   --border: #2e2e2e;
 }
 
-html.light {
+body.light {
+  --background: #ffffff;
+  --foreground: #000000;
+  --muted: #6b6b6b;
+  --border: #dedede;
+}
+
+body.leaves {
   --background: #ffffff;
   --foreground: #000000;
   --muted: #6b6b6b;

@@ -46,7 +46,7 @@ async function getUserData(userId) {
   const user = await db.users.findById(userId);
 
   // Store in cache for future requests
-  await redis.set(`user:${userId}`, JSON.stringify(user), 'EX', 3600);
+  await redis.set(`user:${userId}`, JSON.stringify(user), "EX", 3600);
 
   return user;
 }

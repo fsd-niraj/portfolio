@@ -24,7 +24,7 @@ SQL injection and other injection attacks occur when untrusted data is sent to a
 const query = `SELECT * FROM users WHERE email = '${userInput}'`;
 
 // GOOD - Using parameterized queries
-const query = 'SELECT * FROM users WHERE email = ?';
+const query = "SELECT * FROM users WHERE email = ?";
 db.execute(query, [userInput]);
 ```
 
@@ -39,7 +39,7 @@ Authentication vulnerabilities can allow attackers to compromise passwords, keys
 
 ```javascript
 // Example: Hashing passwords with bcrypt
-import bcrypt from 'bcrypt';
+import bcrypt from "bcrypt";
 
 async function hashPassword(password) {
   const saltRounds = 12;
@@ -82,15 +82,15 @@ Secure your APIs with:
 
 ```javascript
 // Example: Rate limiting with Express
-import rateLimit from 'express-rate-limit';
+import rateLimit from "express-rate-limit";
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // Limit each IP to 100 requests per windowMs
-  message: 'Too many requests from this IP'
+  message: "Too many requests from this IP",
 });
 
-app.use('/api/', limiter);
+app.use("/api/", limiter);
 ```
 
 ## Encryption and Data Protection
@@ -117,23 +117,25 @@ Implement these HTTP security headers:
 
 ```javascript
 // Example: Security headers with Helmet.js
-import helmet from 'helmet';
+import helmet from "helmet";
 
-app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      styleSrc: ["'self'", "'unsafe-inline'"],
-      scriptSrc: ["'self'"],
-      imgSrc: ["'self'", "data:", "https:"],
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        scriptSrc: ["'self'"],
+        imgSrc: ["'self'", "data:", "https:"],
+      },
     },
-  },
-  hsts: {
-    maxAge: 31536000,
-    includeSubDomains: true,
-    preload: true
-  }
-}));
+    hsts: {
+      maxAge: 31536000,
+      includeSubDomains: true,
+      preload: true,
+    },
+  })
+);
 ```
 
 ## Dependency Security
