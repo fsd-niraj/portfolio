@@ -135,7 +135,6 @@ export default function RootLayout({
             t.overlay && (
               <video
                 key={t.overlay.id}
-                src={t.overlay.src}
                 id={t.overlay.id}
                 className="fixed size-full object-cover inset-0 z-[999] pointer-events-none transition-opacity duration-500 ease-in-out"
                 style={{ opacity: 0 }}

@@ -14,14 +14,18 @@ export default function ThemeToggle() {
 
     themes.forEach((t) => {
       if (!t.overlay) return;
-      const el = document.getElementById(t.overlay.id);
+      const el = document.getElementById(t.overlay.id) as HTMLVideoElement | null;
       if (!el) return;
-      el.style.opacity = String(
-        t.name === current.name ? t.overlay.activeOpacity : 0
-      );
-      el.style.mixBlendMode = String(
-        t.name === current.name ? t.overlay.blendMode : ""
-      );
+
+      const isActive = t.name === current.name;
+
+      if (isActive && !el.src) {
+        el.src = t.overlay.src;
+        el.play();
+      }
+
+      el.style.opacity = String(isActive ? t.overlay.activeOpacity : 0);
+      el.style.mixBlendMode = isActive ? (t.overlay.blendMode ?? "") : "";
     });
   }, [index]);
 
