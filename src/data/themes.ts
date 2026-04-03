@@ -20,13 +20,4 @@ export const themes: ThemeConfig[] = [
       blendMode: "multiply",
     },
   },
-  {
-    name: "dessert",
-    overlay: {
-      src: "/assets/dessert.mp4",
-      id: "overlay-dessert",
-      activeOpacity: 0.35,
-      blendMode: "difference",
-    },
-  },
 ];
