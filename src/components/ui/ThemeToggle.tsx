@@ -14,7 +14,9 @@ export default function ThemeToggle() {
 
     themes.forEach((t) => {
       if (!t.overlay) return;
-      const el = document.getElementById(t.overlay.id) as HTMLVideoElement | null;
+      const el = document.getElementById(
+        t.overlay.id
+      ) as HTMLVideoElement | null;
       if (!el) return;
 
       const isActive = t.name === current.name;
