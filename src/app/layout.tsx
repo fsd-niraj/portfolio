@@ -125,6 +125,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7905964889390214"
+          crossOrigin="anonymous" />
+        <meta name="google-adsense-account" content="ca-pub-7905964889390214" />
       </head>
       <body
         className={`${inter.variable} ${season.variable} ${exposure.variable} ${geistMono.variable} antialiased tracking-tight`}
