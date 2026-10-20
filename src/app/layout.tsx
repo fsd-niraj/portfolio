@@ -4,7 +4,6 @@ import { Inter, Geist_Mono } from "next/font/google";
 import Season from "next/font/local";
 import { siteConfig } from "@/data/site-config";
 import { getPersonSchema, getWebsiteSchema } from "@/lib/structured-data";
-import { themes } from "@/data/themes";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -128,27 +127,9 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${season.variable} ${exposure.variable} ${geistMono.variable} antialiased tracking-tight transition-all duration-500 ease-in-out`}
+        className={`${inter.variable} ${season.variable} ${exposure.variable} ${geistMono.variable} antialiased tracking-tight`}
       >
-        {themes.map(
-          (t) =>
-            t.overlay && (
-              <video
-                key={t.overlay.id}
-                id={t.overlay.id}
-                className="fixed size-full object-cover inset-0 z-[999] pointer-events-none transition-opacity duration-500 ease-in-out"
-                style={{ opacity: 0 }}
-                autoPlay
-                loop
-                playsInline
-                muted
-                preload="none"
-              />
-            )
-        )}
-        <div className="relative max-w-2xl m-auto border-x border-dashed border-border min-h-screen px-4 transition-[border] duration-500">
-          {children}
-        </div>
+        {children}
         {siteConfig.analytics?.googleAdSenseId && (
           <script
             async

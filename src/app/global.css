@@ -83,3 +83,15 @@ body {
 .full-bleed-dot:last-child {
   left: calc(50% + 21rem);
 }
+
+@layer utilities {
+  .border,
+  .border-t,
+  .border-b,
+  .border-l,
+  .border-r,
+  .border-x,
+  .border-y {
+    border-style: dashed;
+  }
+}

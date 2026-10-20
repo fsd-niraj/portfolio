@@ -18,7 +18,6 @@ export function getPersonSchema() {
     jobTitle: "Software Engineer",
     worksFor: {
       "@type": "Organization",
-      name: "Legends",
     },
   };
 }

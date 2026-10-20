@@ -4,11 +4,6 @@ export const hero = {
   fields: "Product and AI",
 };
 
-export const glance = [
-  { tenure: "3.5+", description: "years of experience" },
-  { tenure: "2", description: "freelance" },
-];
-
 export const projects = [
   {
     img: "https://github.com/fsd-niraj/pit-tool",

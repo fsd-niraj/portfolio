@@ -1,9 +1,11 @@
+export const BASE_URL = "https://fsd-niraj.dev";
+
 export const siteConfig = {
   name: "@fsd-niraj",
   title: "Niraj Panchal | Software Engineer",
   description: "I build and ship softwares impactful softwares",
-  url: "https://fsd-niraj.com",
-  ogImage: "https://fsd-niraj.com/opengraph-image",
+  url: BASE_URL,
+  ogImage: `${BASE_URL}/opengraph-bg.png`,
 
   locale: "en_US",
   themeColor: "#09090b",

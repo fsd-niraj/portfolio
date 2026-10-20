@@ -37,7 +37,10 @@ export default async function OGImage() {
       ? "http://localhost:3000"
       : process.env.NEXT_PUBLIC_SITE_URL;
 
-  const bg = new URL("/opengraph-bg.png", base).toString();
+  const bg = new URL(
+    String(process.env.NEXT_PUBLIC_OG_IMG_URL),
+    base
+  ).toString();
 
   return new ImageResponse(
     <div
