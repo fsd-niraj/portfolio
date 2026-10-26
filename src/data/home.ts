@@ -1,124 +1,148 @@
-export const hero = {
-  name: "Niraj",
-  role: "developer",
-  fields: "Product and AI",
-};
+import {
+  Braces,
+  Database,
+  Gauge,
+  GitBranch,
+  Layers3,
+  Network,
+} from "lucide-react";
+
+export const services = [
+  {
+    number: "01",
+    icon: Database,
+    title: "Database engineering",
+    headline: "Make your data work harder.",
+    description:
+      "Slow queries, inefficient indexes, and poor data models can hold back an entire product. Find the bottlenecks, understand the workload, and optimize what matters.",
+    capabilities: [
+      "Query analysis & execution plans",
+      "Schema design & indexing",
+      "Transactions & concurrency",
+      "Connection pooling & caching",
+    ],
+    tags: ["PostgreSQL", "MySQL", "Redis"],
+  },
+  {
+    number: "02",
+    icon: Gauge,
+    title: "Full-stack optimization",
+    headline: "Fast where it matters. Reliable everywhere.",
+    description:
+      "Performance doesn't stop at the database. Trace the request from browser to backend, identify wasted work, and improve the entire application.",
+    capabilities: [
+      "API latency & backend profiling",
+      "Frontend loading & rendering",
+      "Queues & background processing",
+      "Observability & reliability",
+    ],
+    tags: ["Node.js", "React", "Kafka"],
+  },
+  {
+    number: "03",
+    icon: Braces,
+    title: "AI integration",
+    headline: "Turn AI experiments into useful products.",
+    description:
+      "Build AI features around real business needs, with the data access, application architecture, and operational controls required to run them reliably.",
+    capabilities: [
+      "LLM integration & AI assistants",
+      "Retrieval-augmented generation",
+      "Tool calling & MCP",
+      "Latency & inference-cost control",
+    ],
+    tags: ["LLMs", "RAG", "MCP"],
+  },
+];
 
 export const projects = [
   {
-    img: "https://github.com/fsd-niraj/pit-tool",
-    title: "PIT Tool",
-    category: "project",
-    href: "https://github.com/fsd-niraj/pit-tool",
+    number: "01",
+    category: "DATA INFRASTRUCTURE",
+    title: "Real-time enterprise data platform",
+    description:
+      "Designed event-driven ingestion and stream-processing workflows for heterogeneous enterprise systems, with an emphasis on reliability, throughput, and operational visibility.",
+    details: [
+      "Kafka-based ingestion pipelines",
+      "Idempotent consumers and event replay",
+      "Backpressure, retries, and dead-letter queues",
+      "Processing-lag monitoring and query optimization",
+    ],
+    icon: Network,
+    stack: "Kafka · PostgreSQL · APIs · Observability",
   },
   {
-    img: "https://github.com/fsd-niraj/hyperx-macos",
-    title: "HyperX NGENUITY - MacOS",
-    category: "project",
-    href: "https://github.com/fsd-niraj/hyperx-macos",
+    number: "02",
+    category: "DATABASE ENGINEERING",
+    title: "Data migration & reconciliation engine",
+    description:
+      "Built a migration platform to move data between systems with resumable workers, incremental processing, and automated source-to-target validation.",
+    details: [
+      "Schema discovery and mapping",
+      "Checkpointed, idempotent migration workers",
+      "Count, checksum, and aggregate validation",
+      "Audit trails and progress tracking",
+    ],
+    icon: GitBranch,
+    stack: "SQL · TypeScript · Background workers",
   },
   {
-    img: "https://static.vecteezy.com/system/resources/thumbnails/025/008/911/small_2x/blue-noise-textured-gradient-background-grainy-blurred-landing-page-backdrop-website-header-poster-banner-design-photo.jpg",
-    title: "Youtube FaceLess",
-    category: "project",
-    href: "#",
-  },
-  {
-    img: "https://static.vecteezy.com/system/resources/thumbnails/025/008/911/small_2x/blue-noise-textured-gradient-background-grainy-blurred-landing-page-backdrop-website-header-poster-banner-design-photo.jpg",
-    title: "AI Receptionist",
-    category: "project",
-    href: "#",
-  },
-  {
-    img: "/assets/image2.png",
-    title: "Vibe coded landing page",
-    category: "project",
-    href: "#",
-  },
-  {
-    img: "/assets/image1.png",
-    title: "Vibe coded dashboard",
-    category: "project",
-    href: "#",
+    number: "03",
+    category: "APPLICATION ENGINEERING",
+    title: "Real-time operational monitoring",
+    description:
+      "Developed full-stack monitoring experiences for payment-terminal health and latency, bringing live telemetry and network diagnostics into one operational view.",
+    details: [
+      "Live telemetry dashboards",
+      "Network fault detection using SNMP",
+      "Streaming data visualization",
+      "Frontend performance and code splitting",
+    ],
+    icon: Layers3,
+    stack: "React · Node.js · D3.js · SNMP",
   },
 ];
 
-export const blogs = [
+export const myprocess = [
   {
-    date: "Dec 8, 2025",
-    title: "Why Interac Isn't as Fast as UPI",
-    subTitle: "",
-    href: "https://medium.com/@fsd-niraj/why-interac-isnt-as-fast-as-upi-a11a866ea799",
+    number: "01",
+    title: "Understand",
+    description:
+      "Learn the system, the workload, and what is actually going wrong.",
   },
   {
-    date: "April 30, 2025",
-    title: "How iOS and Android Power Live App Icons",
-    subTitle:
-      "Unlocking the mystery behind the live Clock and Calendar icons — and why you can’t replicate them in your own apps (yet as of April 2025).",
-    href: "https://medium.com/gitconnected/real-time-app-icons-hmm-lets-read-about-it-a31192a14782",
+    number: "02",
+    title: "Measure",
+    description:
+      "Establish a baseline with execution plans, traces, and performance metrics.",
   },
   {
-    date: "Dec 6, 2024",
-    title: "An Introduction to GitHub Dependabot Alerts",
-    subTitle:
-      "Discover how GitHub Dependabot alerts help developers automate dependency management, detect vulnerabilities, and maintain a secure and compliant codebase effortlessly.",
-    href: "https://medium.com/gitconnected/dependabot-start-using-it-right-now-b765828ae83d",
+    number: "03",
+    title: "Diagnose",
+    description:
+      "Find the root cause and evaluate the trade-offs before changing anything.",
   },
   {
-    date: "Sept 24, 2024",
-    title: "What Happens When a Message is Deleted on WhatsApp",
-    subTitle:
-      "Exploring WhatsApp's Notification Handling for Deleted Messages with System Design Insights and Code Samples.",
-    href: "https://medium.com/gitconnected/how-does-whatsapp-changes-notifications-once-message-is-deleted-c3a0f0f265c5",
-  },
-  {
-    date: "Sept 19, 2024",
-    title: "Building ATS friendly resume",
-    subTitle:
-      "Master the Art of ATS Optimization: Structure Your Resume for Maximum Parsing Accuracy",
-    href: "https://medium.com/gitconnected/how-to-get-a-100-resume-parse-rate-a-developers-guide-c27fc5d09767",
-  },
-  {
-    date: "June 24, 2024",
-    title: "Server monitoring system with grafana",
-    subTitle: "",
-    href: "https://medium.com/gitconnected/building-a-robust-server-monitoring-system-with-grafana-prometheus-loki-and-node-js-455d1e170407",
+    number: "04",
+    title: "Optimize",
+    description:
+      "Implement focused improvements and compare the results against the baseline.",
   },
 ];
 
-export const books = [
-  { title: "Think Straight", author: "Darius foroux", category: "mind" },
+export const principles = [
   {
-    title: "Designing Data-Intensive Applications",
-    author: "Martin Kelppmann",
-    category: "tech",
+    title: "Measure before optimizing",
+    description:
+      "A plausible bottleneck isn't necessarily the actual bottleneck.",
   },
   {
-    title: "Database Internals",
-    author: "Alex petrov",
-    category: "tech",
+    title: "Fix causes, not symptoms",
+    description: "Adding infrastructure can hide a problem without solving it.",
   },
   {
-    title: "Zanzibar",
-    author: "Google",
-    category: "tech",
+    title: "Keep complexity intentional",
+    description:
+      "Every index, cache, queue, and service should justify its existence.",
   },
-];
-
-export type SocialIconKey =
-  | "github"
-  | "twitter"
-  | "linkedin"
-  | "instagram"
-  | "email";
-
-export const socialLinks: {
-  url: string;
-  label: string;
-  iconKey: SocialIconKey;
-}[] = [
-  { url: "#", label: "GitHub", iconKey: "github" },
-  { url: "#", label: "Twitter", iconKey: "twitter" },
-  { url: "#", label: "LinkedIn", iconKey: "linkedin" },
-  { url: "#", label: "Instagram", iconKey: "instagram" },
 ];
