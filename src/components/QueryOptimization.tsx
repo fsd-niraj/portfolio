@@ -132,10 +132,10 @@ export default function QueryOptimizationLab() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="max-w-3xl">
-          <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.16em] text-[#77786e]">
+          {/* <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.16em] text-[#77786e]">
             <Database size={15} />
             Interactive engineering lab / 01
-          </div>
+          </div> */}
 
           <h2
             id="query-lab-title"

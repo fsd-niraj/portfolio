@@ -14,6 +14,7 @@ import {
   Zap,
 } from "lucide-react";
 import { principles, myprocess, projects, services } from "@/data/home";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -30,7 +31,8 @@ export default function HomePage() {
             aria-label="Home"
           >
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#20211f] text-sm font-semibold text-white">
-              NP
+              {/* NP */}
+              <Image alt="NP" src="/favicon.png" width={100} height={100} />
             </span>
             <div className="flex flex-col">
               <span className="text-sm font-semibold tracking-tight">
@@ -47,7 +49,7 @@ export default function HomePage() {
               Services
             </Link>
             <Link href="#work" className="transition hover:text-black">
-              Selected work
+              Work
             </Link>
             <Link href="#approach" className="transition hover:text-black">
               Approach
@@ -56,7 +58,7 @@ export default function HomePage() {
               About
             </Link>
             <Link href="/demo" className="transition hover:text-black">
-              Demo
+              Example
             </Link>
           </div>
 
@@ -80,10 +82,10 @@ export default function HomePage() {
       >
         <div className="grid items-center gap-16 lg:grid-cols-[1.25fr_0.75fr] lg:gap-12">
           <div>
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#20211f]/15 px-3.5 py-2 text-xs text-[#55574e]">
+            {/* <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#20211f]/15 px-3.5 py-2 text-xs text-[#55574e]">
               <span className="h-2 w-2 rounded-full bg-[#779d38]" />
               Software engineering · Performance · AI
-            </div>
+            </div> */}
 
             <h1 className="max-w-[800px] text-[clamp(3.4rem,8vw,6.8rem)] font-medium leading-[0.98] tracking-[-0.075em]">
               I make software
