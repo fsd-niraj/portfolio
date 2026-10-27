@@ -240,32 +240,50 @@ export default function HomePage() {
             return (
               <article
                 key={service.number}
-                className="group flex flex-col rounded-[24px] border border-[#20211f]/10 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-[#20211f]/25 hover:shadow-[0_18px_55px_-35px_rgba(32,33,31,0.3)] sm:p-7"
+                className="group relative isolate flex flex-col overflow-hidden rounded-[24px] border border-[#20211f]/10 bg-white p-6 transition-all duration-300 ease-out hover:border-[#c6e76b] hover:shadow-[0_18px_55px_-35px_rgba(32,33,31,0.3)] motion-reduce:transition-none sm:p-7"
               >
-                <div className="flex items-center justify-between">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f2f2ec]">
+                {/* Grainy green hover background */}
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 -z-10 bg-[#d9f875] opacity-0 transition-opacity duration-300 group-hover:opacity-65 motion-reduce:transition-none"
+                  style={{
+                    backgroundImage: `
+        radial-gradient(
+          ellipse at 20% 20%,
+          rgba(255, 255, 255, 0.45),
+          transparent 55%
+        ),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.24'/%3E%3C/svg%3E")
+      `,
+                    backgroundBlendMode: "screen, multiply",
+                  }}
+                />
+
+                <div className="relative z-10 flex items-center justify-between">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f2f2ec] transition-colors duration-300 group-hover:bg-white/60">
                     <Icon size={21} strokeWidth={1.6} />
                   </span>
+
                   <span className="text-xs text-[#999a8f]">
                     {service.number}
                   </span>
                 </div>
 
-                <p className="mt-7 text-xs font-medium uppercase tracking-[0.13em] text-[#85867b]">
+                <p className="relative z-10 mt-7 text-xs font-medium uppercase tracking-[0.13em] text-[#85867b]">
                   {service.title}
                 </p>
 
-                <h3 className="mt-3 text-[26px] font-medium leading-tight tracking-[-0.045em]">
+                <h3 className="relative z-10 mt-3 text-[26px] font-medium leading-tight tracking-[-0.045em]">
                   {service.headline}
                 </h3>
 
-                <p className="mt-4 text-sm leading-7 text-[#686961]">
+                <p className="relative z-10 mt-4 text-sm leading-7 text-[#686961]">
                   {service.description}
                 </p>
 
-                <div className="my-6 h-px bg-[#20211f]/10" />
+                <div className="relative z-10 my-6 h-px bg-[#20211f]/10" />
 
-                <ul className="space-y-3">
+                <ul className="relative z-10 space-y-3">
                   {service.capabilities.map((capability) => (
                     <li
                       key={capability}
@@ -280,11 +298,11 @@ export default function HomePage() {
                   ))}
                 </ul>
 
-                <div className="mt-auto flex flex-wrap gap-2 pt-7">
+                <div className="relative z-10 mt-auto flex flex-wrap gap-2 pt-7">
                   {service.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-[#f3f3ee] px-3 py-1.5 text-[11px] text-[#686961]"
+                      className="rounded-full bg-[#f3f3ee] px-3 py-1.5 text-[11px] text-[#686961] transition-colors duration-300 group-hover:bg-white/55"
                     >
                       {tag}
                     </span>
